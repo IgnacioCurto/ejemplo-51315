@@ -1,0 +1,104 @@
+/* Atributos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Roboto:wght@300;400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #1d1d1f;
+}
+
+.gridContainer{
+    /* Le digo al elmento que tenga formato de grilla */
+    display: grid; 
+    /* Defino las columnas usando porcentajes
+    (cada valor es una columna y con porcentajes siempre
+    tenemos que sumar un total de 100% para no generar
+    un scroll horizontal) */
+    grid-template-columns: 30% 30% 40%; 
+    /* Defino las filas que con "min-content" van a
+    ajustarse automáticamente al tamaño de los elementos */
+    grid-template-rows: min-content min-content min-content min-content min-content; 
+    /* Defino "el nombre" de cada celda o área de nuestra grilla.
+    Se puede pensar que cada grupo de comillas es una fila
+    y cada valor es una columna */
+    grid-template-areas: 
+        "titulo    titulo    img"
+        "parrafo   parrafo   img"
+        "button    ...       img"
+        "subtitulo subtitulo subtitulo"
+        "img2      img2      img2"; 
+    
+    /* Atributos de diseño*/
+    width: 70%;
+    margin: 5% auto;
+}
+.gridContainer h2 { 
+    /* Le asigno el lugar en la grilla con el
+    nombre correspondiente */
+    grid-area: titulo; 
+
+    /* Atributos de diseño */
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin: 5% 0;
+}
+.gridContainer p { 
+    /* Le asigno el lugar en la grilla con el
+    nombre correspondiente */
+    grid-area: parrafo; 
+
+    /* Atributos de diseño */
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    margin: 5% 0;
+    width: 90%;
+}
+.gridContainer button { 
+    /* Le asigno el lugar en la grilla con el
+    nombre correspondiente */
+    grid-area: button; 
+
+    /* Atributos de diseño */
+    border: 0;
+    background-color: #0071E3;
+    color: white;
+    font-size: 1.2rem;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 980px;
+}
+.gridContainer .vertical { 
+    /* Le asigno el lugar en la grilla con el
+    nombre correspondiente */
+    grid-area: img; 
+
+    /* Atributos de diseño */
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.gridContainer h3{
+    /* Le asigno el lugar en la grilla con el
+    nombre correspondiente */
+    grid-area: subtitulo;
+
+    /* Atributos de diseño */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 10rem auto 5rem auto;
+}
+.gridContainer .horizontal { 
+    /* Le asigno el lugar en la grilla con el
+    nombre correspondiente */
+    grid-area: img2; 
+
+    /* Atributos de diseño */
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+
+/* Y listo! 😊 */
